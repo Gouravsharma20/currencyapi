@@ -15,11 +15,14 @@ junit = "4.13.2"
 kotlin = "2.0.0"
 
 kotlinx-serialization = "2.0.0"
+kotlinxSerializationJson = "1.5.1"
 realm = "1.11.0"
 
 voyager = "1.0.0"
 koin = "3.3.0"
 ktor = "2.5.4"
+
+navigation = "2.7.7"
 
 kotlinx-datetime = "0.6.0"
 mongodb-realm = "1.11.0"
@@ -29,10 +32,22 @@ stately = "1.1.0"
 
 multiplatform-settings-no-args = "0.8.1"
 multiplatform-settings-coroutines = "0.8.1"
+material3Android = "1.2.1"
+firebaseCrashlyticsBuildtools = "3.0.2"
 
 
 [libraries]
 
+
+
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx:kotlinx-serialization-json",name= "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+
+
+
+navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" } # Add this line
+navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" } # Add this line
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" } # Add this line
+kotlinx-serialization-json-1-5-1 = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json-1.5.1" }
 multiplatform-settings-no-args = { module = "com.russhwolf:multiplatform-settings-no-args", version.ref = "multiplatform-settings-no-args" }
 multiplatform-settings-coroutines = {module = "com.russhwolf:multiplatform-settings-coroutines", version.ref = "multiplatform-settings-coroutines"}
 
@@ -58,10 +73,13 @@ ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
 ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+ktor-client-cio = {module = "io.ktor:ktor-client-cio", version.ref = "ktor"}
 
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 mongodb-realm = { module = "io.realm.kotlin:library-base", version.ref = "mongodb-realm" }
 stately-common = { module = "co.touchlab:stately-common", version.ref = "stately" }
+androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
+firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "firebase-crashlytics-buildtools", version.ref = "firebaseCrashlyticsBuildtools" }
 
 
 [plugins]

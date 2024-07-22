@@ -9,6 +9,7 @@ plugins {
     alias(libs.plugins.kotlinxSerialization)
     alias(libs.plugins.realm.plugin)
 
+
 }
 
 kotlin {
@@ -44,8 +45,15 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            implementation(libs.kotlinx.serialization.json)
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.cio)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.kotlinx.json)
+
         }
         iosMain.dependencies {
+
         }
     }
 }
@@ -85,5 +93,9 @@ android {
     dependencies {
         debugImplementation(compose.uiTooling)
     }
+}
+dependencies {
+    implementation(libs.androidx.material3.android)
+    implementation(libs.firebase.crashlytics.buildtools)
 }
 
